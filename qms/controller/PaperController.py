@@ -26,7 +26,17 @@ class addPaper(Resource):
         judge=eval(args.get("judge"))
         blank=eval(args.get("blank"))
         discuss=eval(args.get("discuss"))
-        sum=singlechoose['num']+multiplechoose['num']+judge['num']+blank['num']+discuss['num']
+
+        print(name)
+        print(schoolName)
+        print(subject)
+        print(grade)
+        print(score)
+        print(singlechoose)
+        print(multiplechoose)
+        print(judge)
+        print(blank)
+        print(discuss)
 
         Session=db.session
         school=Session.query(School).filter_by(name=schoolName).first()
@@ -38,7 +48,7 @@ class addPaper(Resource):
                 Session.commit()
             else:
                 sid=school.id
-            Session.add(Paper(id=get_uuid(),name=name,school=sid,subject=subject,grade=grade,score=score))
+            Session.add(Paper(id=pid,name=name,school=sid,subject=subject,grade=grade,score=score))
 
             Session.commit()
         except:
@@ -54,20 +64,37 @@ class addPaper(Resource):
             'discuss': [],
             'paper_id':pid
         }
+        count=1
         for i in range(singlechoose['num']):
-            res_data['singlechoose'].append(get_uuid())
+            qid=get_uuid()
+            Session.add(QuestionInfo(id=qid,type="singlechoose",subject=subject,paper=pid,position=count,score=singlechoose['score']))
+            res_data['singlechoose'].append(qid)
+            count+=1
 
         for i in range(multiplechoose['num']):
-            res_data['multiplechoose'].append(get_uuid())
+            qid = get_uuid()
+            Session.add(QuestionInfo(id=qid, type="multiplechoose", subject=subject, paper=pid, position=count,score=singlechoose['score']))
+            res_data['multiplechoose'].append(qid)
+            count += 1
 
         for i in range(judge['num']):
-            res_data['judge'].append(get_uuid())
+            qid = get_uuid()
+            Session.add(QuestionInfo(id=qid, type="judge", subject=subject, paper=pid, position=count,score=singlechoose['score']))
+            res_data['judge'].append(qid)
+            count+=1
 
         for i in range(blank['num']):
-            res_data['blank'].append(get_uuid())
+            qid = get_uuid()
+            Session.add(QuestionInfo(id=qid, type="blank", subject=subject, paper=pid, position=count,score=singlechoose['score']))
+            res_data['blank'].append(qid)
+            count += 1
 
         for i in range(discuss['num']):
-            res_data['discuss'].append(get_uuid())
-
+            qid = get_uuid()
+            Session.add(QuestionInfo(id=qid, type="discuss", subject=subject, paper=pid, position=count,score=singlechoose['score']))
+            res_data['discuss'].append(qid)
+            count += 1
+        Session.commit()
+        print(res_data)
         return res_data,200
 
