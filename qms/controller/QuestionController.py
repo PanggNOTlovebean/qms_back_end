@@ -1,9 +1,8 @@
 from flask_restful import Resource, reqparse, abort
 from qms import db
 from ..model.models import *
-import time
 from qms.common.gen import get_uuid
-import datetime
+
 
 parser = reqparse.RequestParser()
 # 问题信息parser
@@ -84,6 +83,7 @@ class addQuestionDetail(Resource):
         print(analysis)
         Session = db.session
         if not Session.query(QuestionInfo).filter_by(id=info_id).first():
+            Session.close()
             return "找不到试题信息", 403
         else:
             questionDetail=QuestionDetail(id=get_uuid(),stem=stem,answer=answer,question_info=info_id,analysis=analysis)
@@ -91,3 +91,4 @@ class addQuestionDetail(Resource):
             Session.commit()
             Session.close()
         return "success", 201
+

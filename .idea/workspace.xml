@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c5cac32-1cb8-4876-a13b-1a74d50d5ee1" name="Default Changelist" comment="" />
+    <list default="true" id="6c5cac32-1cb8-4876-a13b-1a74d50d5ee1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/qms/controller/PaperController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qms/controller/QuestionController.py" beforeDir="false" afterPath="$PROJECT_DIR$/qms/controller/QuestionController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/runserver.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,19 +17,31 @@
     <SUITE FILE_PATH="coverage/QMS_BACK_END$Flask__qms___init___py_.coverage" NAME="Flask (qms/__init__.py) Coverage Results" MODIFIED="1558845726722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/QMS_BACK_END$test_model.coverage" NAME="test_model Coverage Results" MODIFIED="1558842359753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/qms/test" />
     <SUITE FILE_PATH="coverage/QMS_BACK_END$gen.coverage" NAME="gen Coverage Results" MODIFIED="1558856309376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/qms/common" />
-    <SUITE FILE_PATH="coverage/QMS_BACK_END$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1558863301009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/QMS_BACK_END$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1558928539391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/QMS_BACK_END$QMS_BACK_END.coverage" NAME="QMS_BACK_END Coverage Results" MODIFIED="1558798679797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/QMS_BACK_END$QuestionController.coverage" NAME="QuestionController Coverage Results" MODIFIED="1558851955758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/qms/controller" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qms/controller/QuestionController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+            <state relative-caret-position="-344">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="44" />
               <folding>
-                <element signature="e#1#52#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/qms/controller/PaperController.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/runserver.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -72,19 +89,10 @@
         <entry file="file://$PROJECT_DIR$/qms/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qms/test/test_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -98,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/qms/model/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-136">
-              <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+              <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -118,6 +126,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -133,22 +144,51 @@
         <option value="$PROJECT_DIR$/qms/common/gen.py" />
         <option value="$PROJECT_DIR$/runserver.py" />
         <option value="$PROJECT_DIR$/qms/controller/QuestionController.py" />
+        <option value="$PROJECT_DIR$/qms/controller/PaperController.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="273" />
-    <option name="y" value="117" />
+    <option name="x" value="883" />
+    <option name="y" value="103" />
     <option name="width" value="1795" />
     <option name="height" value="799" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="QMS_BACK_END" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QMS_BACK_END" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QMS_BACK_END" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QMS_BACK_END" type="462c0819:PsiDirectoryNode" />
+              <item name="qms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QMS_BACK_END" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QMS_BACK_END" type="462c0819:PsiDirectoryNode" />
+              <item name="qms" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QMS_BACK_END" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QMS_BACK_END" type="462c0819:PsiDirectoryNode" />
+              <item name="qms" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,12 +355,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1558798633897</updated>
-      <workItem from="1558798637088" duration="30560000" />
+      <workItem from="1558798637088" duration="38512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30560000" />
+    <option name="totallyTimeSpent" value="38512000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,13 +373,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27010724" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" x="429" y="319" width="677" height="186" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.2857143" />
+      <window_info anchor="bottom" x="429" y="319" width="677" height="186" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.29461756" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47524753" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,7 +505,7 @@
     <entry file="file://$PROJECT_DIR$/qms/test/test_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -488,28 +529,25 @@
     <entry file="file://$PROJECT_DIR$/qms/model/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/qms/controller/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/qms/model/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
-          <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qms/db.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/qms/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qms/db.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/qms/setting.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -521,19 +559,32 @@
     <entry file="file://$PROJECT_DIR$/runserver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/qms/controller/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/qms/controller/QuestionController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+        <state relative-caret-position="-344">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="44" />
           <folding>
-            <element signature="e#1#52#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qms/controller/PaperController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
