@@ -20,7 +20,7 @@ parser.add_argument("analysis")
 parser.add_argument("answer")
 parser.add_argument("info_id")
 
-
+parser.add_argument("form",location="json")
 class addQuestionInfo(Resource):
     def get(self):
         return "success", 200
@@ -34,6 +34,7 @@ class addQuestionInfo(Resource):
         score = args.get("score")
         position = args.get("position")
         items = eval(args.get("items"))
+
         Session = db.session
         # 来源卷不存在 添加来源卷
         p = Session.query(Paper).filter_by(name=paper).first()
@@ -77,10 +78,8 @@ class addQuestionDetail(Resource):
         answer = args.get("answer")
         info_id = args.get("info_id")
         analysis = args.get("analysis")
-        print(stem)
-        print(answer)
-        print(info_id)
-        print(analysis)
+        stem=stem.replace(':</p><p>',":</p><p>&nbsp&nbsp&nbsp&nbsp")
+        form=eval(args.get("form"))
         Session = db.session
         if not Session.query(QuestionInfo).filter_by(id=info_id).first():
             Session.close()
@@ -88,7 +87,29 @@ class addQuestionDetail(Resource):
         else:
             questionDetail=QuestionDetail(id=get_uuid(),stem=stem,answer=answer,question_info=info_id,analysis=analysis)
             Session.add(questionDetail)
+            if form:
+                knowledges_id=[]
+                items=form['items']
+                hardness=form['hardness']
+                score=form['score']
+                print(form)
+                # 生成知识点对应id
+                for item in items:
+                    k = Session.query(Knowledge).filter_by(name=item["value"]).first()
+                    if k:
+                        knowledges_id.append(k.id)
+                    else:
+                        kid = get_uuid()
+                        Session.add(Knowledge(id=kid, name=item["value"]))
+                        knowledges_id.append(kid)
+                # 保存知识点和对应id
+                for knowledge_id in knowledges_id:
+                    questionKnowledge = QuestionKnowledge(id=get_uuid(), question=info_id, knowledge=knowledge_id)
+                    Session.add(questionKnowledge)
+                #更新Info
+                Session.query(QuestionInfo).filter(QuestionInfo.id==info_id).update({'hardness':hardness,'score':score})
             Session.commit()
             Session.close()
+
         return "success", 201
 
