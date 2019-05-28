@@ -124,6 +124,7 @@ class deleteQuestion(Resource):
         ret = Session.query(QuestionInfo).filter(QuestionInfo.id == info_id).delete()
 
         Session.commit()
+        Session.close()
         if ret == 0:
             return "not found", 404
         return "success", 200
@@ -140,4 +141,5 @@ class QueryOneQuestion(Resource):
         ret_data['stem'] = question_detail.stem
         ret_data['answer'] = question_detail.answer
         ret_data['analysis'] = question_detail.analysis
+        Session.close()
         return ret_data, 200
