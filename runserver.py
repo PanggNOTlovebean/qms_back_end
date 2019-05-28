@@ -1,7 +1,7 @@
 from qms import app
 from qms.controller.QuestionController import addQuestionInfo,addQuestionDetail
-from qms.controller.PaperController import addPaper
-from qms.controller.QuestionManager import QueryAllQuestion,UpdateQuestion,deleteQuestion
+from qms.controller.PaperController import addPaper,makePaper
+from qms.controller.QuestionManager import QueryAllQuestion,UpdateQuestion,deleteQuestion,QueryOneQuestion
 from qms.controller.SchoolManager import QueryAllSchool,UpdateSchool,DeleteSchool
 from qms.controller.PaperManager import QueryAllPaper,UpdatePaper,DeletePaper
 from qms.controller.KnowledgeManager import QueryAllKnowledge,UpdateKnowledge,DeleteKnowledge
@@ -12,9 +12,11 @@ api = Api(app)
 api.add_resource(addQuestionInfo, '/addQuestionInfo', )
 api.add_resource(addQuestionDetail, '/addQuestionDetail', )
 api.add_resource(addPaper,'/addPaper')
+api.add_resource(makePaper,'/makePaper')
 api.add_resource(QueryAllQuestion,'/getAllQuestion')
 api.add_resource(UpdateQuestion,'/updateQuestion')
 api.add_resource(deleteQuestion,'/deleteQuestion')
+api.add_resource(QueryOneQuestion,'/getOneQuestion')
 
 api.add_resource(QueryAllSchool,'/getAllSchool')
 api.add_resource(UpdateSchool,'/updateSchool')
