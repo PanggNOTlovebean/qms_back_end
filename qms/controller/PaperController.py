@@ -23,7 +23,7 @@ def filterGrade(questionInfos, grade):
     #     rets.append(questionInfos)
     #     return rets
     for questionInfo in questionInfos:
-        if questionInfo.paper1.grade == grade:
+        if questionInfo.paper1.grade == grade   :
             rets.append(questionInfo)
     return rets
 
@@ -57,8 +57,8 @@ class addPaper(Resource):
                     return "已有同一试卷", 403
             Session.add(Paper(id=pid, name=name, school=sid, subject=subject, grade=grade, score=score))
             Session.commit()
-        except:
-            return "数据库操作1错误", 500
+        except Exception:
+             return "数据库操作1错误", 500
 
         res_data = {
             'singlechoose': [],
@@ -135,6 +135,7 @@ class makePaper(Resource):
                                                            QuestionInfo.type == "singlechoose").all()
         questionInfos = filterGrade(questionInfos, grade)
         if len(questionInfos) < singlechoose['num']:
+
             return "题不够啦", 400
         # 生成要求数量的随机数
 
