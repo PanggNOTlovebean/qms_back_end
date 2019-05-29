@@ -5,6 +5,7 @@ from qms.controller.QuestionManager import QueryAllQuestion,UpdateQuestion,delet
 from qms.controller.SchoolManager import QueryAllSchool,UpdateSchool,DeleteSchool
 from qms.controller.PaperManager import QueryAllPaper,UpdatePaper,DeletePaper
 from qms.controller.KnowledgeManager import QueryAllKnowledge,UpdateKnowledge,DeleteKnowledge
+from qms.controller.LoginController import LoginCheck
 
 from flask_restful import Api, Resource, reqparse, abort
 
@@ -25,6 +26,7 @@ api.add_resource(DeleteSchool,'/deleteSchool')
 api.add_resource(QueryAllPaper,'/getAllPaper')
 api.add_resource(UpdatePaper,'/updatePaper')
 api.add_resource(DeletePaper,'/deletePaper')
+api.add_resource(LoginCheck,'/login')
 
 api.add_resource(QueryAllKnowledge,'/getAllKnowledge')
 api.add_resource(UpdateKnowledge,'/updateKnowledge')
